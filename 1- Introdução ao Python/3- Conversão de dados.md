@@ -3,25 +3,25 @@
 
 ## Exemplos:
 ## Convertendo int para float
-    ```bash
-    num_inteiro = 10
-    num_flutuante = float(num_inteiro)
-    print(f"Valor inteiro original: {num_inteiro}, após conversão para float: {num_flutuante}")
-    ```
+```bash
+num_inteiro = 10
+num_flutuante = float(num_inteiro)
+print(f"Valor inteiro original: {num_inteiro}, após conversão para float: {num_flutuante}")
+```
 
 ## Convertendo float para int
-    ```bash
-    num_decimal = 9.99
-    num_inteiro = int(num_decimal)
-    print(f"Valor float original: {num_decimal}, após conversão para int: {num_inteiro}")
-    ```
+```bash
+num_decimal = 9.99
+num_inteiro = int(num_decimal)
+print(f"Valor float original: {num_decimal}, após conversão para int: {num_inteiro}")
+```
 
 ## Convertendo int para string
-    ```bash
-    idade = 25
-    idade_str = str(idade)
-    print(f"Valor inteiro original: {idade}, após conversão para string: '{idade_str}'")
-    ```
+```bash
+idade = 25
+idade_str = str(idade)
+print(f"Valor inteiro original: {idade}, após conversão para string: '{idade_str}'")
+```
 
 ## Saída esperada:
 - Valor inteiro original: 10, após conversão para float: 10.0
