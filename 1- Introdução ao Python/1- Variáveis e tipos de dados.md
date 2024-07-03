@@ -3,7 +3,7 @@ Variáveis são usadas para armazenar informações que podem ser referenciadas 
 
 ## Exemplo:
 ### Declaração de variáveis
-```
+```bash
 nome = "Maria"  # String
 idade = 25      # Inteiro
 altura = 1.68   # Float
@@ -16,52 +16,52 @@ is_estudante = True  # Booleano
 Python possui vários tipos de dados integrados. Aqui estão alguns dos mais comuns:
 
 1. Inteiros (int): Números inteiros, positivos ou negativos, sem parte decimal.
-    ```
-    idade = 25
-    ```
+```bash
+idade = 25
+```
 
 2. Flutuantes (float): Números de ponto flutuante, ou seja, números com parte decimal.
-    ```
-    altura = 1.68
-    ```
+```bash
+altura = 1.68
+```
 
 3. Strings (str): Sequência de caracteres, utilizada para representar texto.
-    ```
-    nome = "Maria"
-    ```
+```bash
+nome = "Maria"
+```
 
 4. Booleanos (bool): Valores lógicos que podem ser True (verdadeiro) ou False (falso).
-    ```
-    is_estudante = True
-    ```
+```bash
+is_estudante = True
+```
 
 ## ---------------
 
 ## Formatação de Strings
 A formatação de strings pode tornar a saída de dados mais legível e organizada. Python oferece várias maneiras de formatar strings.
 1. Concatenação de Strings:
-    ```
-    nome = "Carlos"
-    idade = 30
-    mensagem = "Meu nome é " + nome + " e eu tenho " + str(idade) + " anos."
-    print(mensagem)
-    ```
+```bash
+nome = "Carlos"
+idade = 30
+mensagem = "Meu nome é " + nome + " e eu tenho " + str(idade) + " anos."
+print(mensagem)
+```
 
 2. Método str.format():
-    ```
-    nome = "Carlos"
-    idade = 30
-    mensagem = "Meu nome é {} e eu tenho {} anos.".format(nome, idade)
-    print(mensagem)
-    ```
+```bash
+nome = "Carlos"
+idade = 30
+mensagem = "Meu nome é {} e eu tenho {} anos.".format(nome, idade)
+print(mensagem)
+```
 
 3. f-strings (Python 3.6+):
-    ```
-    nome = "Carlos"
-    idade = 30
-    mensagem = f"Meu nome é {nome} e eu tenho {idade} anos."
-    print(mensagem)
-    ```
+```bash
+nome = "Carlos"
+idade = 30
+mensagem = f"Meu nome é {nome} e eu tenho {idade} anos."
+print(mensagem)
+```
 
 ## ---------------
 
@@ -71,28 +71,28 @@ A sobreposição de valores de variáveis ocorre quando uma nova atribuição é
 ## Exemplo de Sobreposição de Variáveis
 Vamos observar um exemplo simples:
 - Inicialmente, a variável 'x' é atribuída com um valor inteiro
-    ```
-    x = 10
-    print(f"Valor inicial de x: {x}")
-    ```
+```bash
+x = 10
+print(f"Valor inicial de x: {x}")
+```
 
 - Sobrescrevendo 'x' com um valor de ponto flutuante
-    ```
-    x = 5.75
-    print(f"Valor de x após sobreposição com float: {x}")
-    ```
+```bash
+x = 5.75
+print(f"Valor de x após sobreposição com float: {x}")
+```
 
 - Sobrescrevendo 'x' com uma string
-    ```
-    x = "Olá, mundo!"
-    print(f"Valor de x após sobreposição com string: {x}")
-    ```
+```bash
+x = "Olá, mundo!"
+print(f"Valor de x após sobreposição com string: {x}")
+```
 
 - Sobrescrevendo 'x' com um valor booleano
-    ```
-    x = True
-    print(f"Valor de x após sobreposição com booleano: {x}")
-    ```
+```bash
+x = True
+print(f"Valor de x após sobreposição com booleano: {x}")
+```
 
 Neste exemplo, a variável x é inicialmente atribuída com um valor inteiro, depois é sobrescrita com um valor flutuante, uma string e, finalmente, um valor booleano. Em cada etapa, o tipo de x muda para refletir o novo valor atribuído.
 
