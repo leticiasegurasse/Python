@@ -150,3 +150,10 @@ Saída esperada:
 - 7 x 10 = 70
 Neste exemplo, o loop 'for' itera de 1 a 10, multiplicando o numero (7) por cada valor de 'i' e imprimindo o resultado.
 
+# ----------------
+
+## Exercício Tabuada com For
+Receba um númeroe mostre a tabuada completa dele usando o laço for.
+
+## Exercício Tabuada completa
+Mostre a tabuada completa de todos os números entre 1 e 10.
