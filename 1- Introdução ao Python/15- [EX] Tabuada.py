@@ -2,7 +2,7 @@
 
 num = int(input("Digite um número: "))
 
-contador = 0
+contador = 1
 
 while contador <= 10:
     print(f"{contador} x {num} = {num * contador}")

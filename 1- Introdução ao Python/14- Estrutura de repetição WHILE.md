@@ -108,5 +108,14 @@ Neste exemplo, o loop while continua indefinidamente até que o usuário adivinh
 
 # ---------------
 
-# Exercício Tabuada:
+## Exercício Tabuada:
 Receba um número inteiro do usuário e mostre a tabuada de multiplicação desse número (até x10).
+
+## Exercício Nota Válida:
+Escreva um programa que receba notas de um aluno (0 - 10), caso a nota digitada esteja fora desse intervalo peça para o professor digitar novamente.
+
+## Exercício Login:
+Defina um usuário e senha e depois tente "logar" verificando se o login e senha são válidos.
+
+## Exercício Números Pares:
+Receba um número e mostre todos os números pares de 0 até o número digitado.
