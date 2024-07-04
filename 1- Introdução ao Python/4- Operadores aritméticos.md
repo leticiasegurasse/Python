@@ -152,3 +152,8 @@ Aqui estão algumas das funções mais úteis e comuns da biblioteca math:
 5. Constantes Matemáticas:
 - math.pi: Constante π (pi), aproximadamente 3.14159.
 - math.e: Constante e (base dos logaritmos naturais), aproximadamente 2.71828.
+
+# ---------------
+
+# Exercício Média:
+Escreva um programa onde o usuário digite duas notas e ele mostre a média das duas notas.

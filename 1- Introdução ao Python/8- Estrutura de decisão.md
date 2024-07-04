@@ -107,3 +107,19 @@ else:
     print("x é 10 ou menor")
 ```
 Neste exemplo, a mensagem "x é maior que 20" será exibida porque a condição x > 10 é verdadeira e x < 20 é falsa.
+
+# ---------------
+
+# Exercício
+
+## Exercício Aprovado/Reprovado:
+Receba 4 notas de um aluno e exiba se ele foi APROVADO (nota maior ou igual a 6), se ele ficou de RECUPERAÇÃO (nota maior ou igual a 4) ou se ele foi REPROVADO (nota menor que 4).
+
+## Exercício Maior Número:
+Receba 3 números inteiros diferentes e exiba o maior deles.
+
+## Exercício Número Positivo ou Negativo:
+Receba um número e exiba se ele é positivo ou negativo.
+
+## Exercício Masculino ou Feminino:
+Receba F para feminino e M para masculino e exiba o sexo da pessoa.
