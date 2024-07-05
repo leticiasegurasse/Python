@@ -157,3 +157,6 @@ Receba um númeroe mostre a tabuada completa dele usando o laço for.
 
 ## Exercício Tabuada completa
 Mostre a tabuada completa de todos os números entre 1 e 10.
+
+## Exercícios Números Pares 
+Exiba todos os números pares entre 1 e 1000 usando o for.
