@@ -369,5 +369,148 @@ Saída esperada:
 
 # ----------------
 
+# List comprehension
+## Sintaxe Básica
+A sintaxe básica de list comprehension é:
+```
+[expressão for item in iterável]
+```
+
+## Exemplos de List Comprehension
+### Exemplo 1: Criando uma Lista de Quadrados
+Vamos criar uma lista que contém os quadrados dos números de 0 a 9.
+```
+quadrados = [x**2 for x in range(10)]
+print(quadrados)
+```
+Saída esperada:
+- [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+### Exemplo 2: Filtrando Elementos
+Podemos adicionar uma condição (if) para filtrar elementos. Por exemplo, vamos criar uma lista que contém apenas os números pares de 0 a 9.
+```
+pares = [x for x in range(10) if x % 2 == 0]
+print(pares)
+```
+Saída esperada:
+- [0, 2, 4, 6, 8]
+
+### Exemplo 3: Convertendo Tipos de Dados
+Vamos converter uma lista de strings em uma lista de inteiros.
+```
+strings = ["1", "2", "3", "4", "5"]
+inteiros = [int(x) for x in strings]
+print(inteiros)
+```
+Saída esperada:
+- [1, 2, 3, 4, 5]
+
+### Exemplo 4: Aplicando Funções
+Podemos aplicar funções a cada elemento de uma lista. Vamos usar a função len() para criar uma lista com os comprimentos das palavras.
+```
+palavras = ["Python", "List", "Comprehension", "Example"]
+comprimentos = [len(palavra) for palavra in palavras]
+print(comprimentos)
+```
+Saída esperada:
+- [6, 4, 13, 7]
+
+### Exemplo 5: List Comprehension Aninhada
+List comprehension pode ser aninhada para criar listas multidimensionais. Por exemplo, vamos criar uma matriz 3x3.
+```
+matriz = [[i + j for j in range(3)] for i in range(3)]
+for linha in matriz:
+    print(linha)
+```
+Saída esperada:
+- [0, 1, 2]
+- [1, 2, 3]
+- [2, 3, 4]
+
+### Exemplo 6: Filtrando e Transformando
+Podemos combinar filtragem e transformação em uma única list comprehension. Vamos criar uma lista dos quadrados dos números pares de 0 a 9.
+```
+quadrados_pares = [x**2 for x in range(10) if x % 2 == 0]
+print(quadrados_pares)
+```
+Saída esperada:
+- [0, 4, 16, 36, 64]
+
+# ----------------
+
+# Referência para Endereço em Python
+Em Python, variáveis que armazenam objetos (como listas, dicionários e instâncias de classes) não contêm diretamente os valores desses objetos, mas sim referências (ou ponteiros) para os endereços de memória onde esses objetos estão armazenados. Isso significa que diferentes variáveis podem referenciar o mesmo objeto na memória, e alterações feitas através de uma variável afetarão todas as variáveis que referenciam aquele objeto.
+
+## Exemplo de Referência
+### Exemplo 1: Referência Compartilhada
+Vamos ver um exemplo básico de como a referência funciona:
+```
+a = [1, 2, 3]
+b = a
+
+b.append(4)
+
+print(a)  # [1, 2, 3, 4]
+print(b)  # [1, 2, 3, 4]
+```
+Neste exemplo, 'a' 'e' b são referências para o mesmo objeto de lista. Quando 'b.append(4)' é chamado, a alteração é refletida em 'a' porque ambos 'a' e 'b' referenciam a mesma lista na memória.
+
+### Exemplo 2: Criando uma Cópia
+Para criar uma cópia de uma lista e evitar referências compartilhadas, você pode usar métodos como list(), slicing ou o módulo copy.
+
+- Usando Slicing:
+```
+a = [1, 2, 3]
+b = a[:]
+
+b.append(4)
+
+print(a)  # [1, 2, 3]
+print(b)  # [1, 2, 3, 4]
+```
+
+- Usando o Método list():
+```
+a = [1, 2, 3]
+b = list(a)
+
+b.append(4)
+
+print(a)  # [1, 2, 3]
+print(b)  # [1, 2, 3, 4]
+```
+
+- Usando o Módulo copy:
+```
+import copy
+
+a = [1, 2, 3]
+b = copy.copy(a)
+
+b.append(4)
+
+print(a)  # [1, 2, 3]
+print(b)  # [1, 2, 3, 4]
+```
+
+## Cópia Profunda
+Para objetos compostos (objetos que contêm outros objetos, como listas de listas), uma cópia superficial (copy.copy()) pode não ser suficiente, pois os objetos internos ainda serão compartilhados. Nesse caso, uma cópia profunda (copy.deepcopy()) pode ser necessária.
+
+### Exemplo 3: Cópia Profunda
+```
+import copy
+
+a = [[1, 2, 3], [4, 5, 6]]
+b = copy.deepcopy(a)
+
+b[0].append(4)
+
+print(a)  # [[1, 2, 3], [4, 5, 6]]
+print(b)  # [[1, 2, 3, 4], [4, 5, 6]]
+```
+
+# ----------------
+
 # Exercício Soma
 Receba 10 valores e exiba a soma de todos eles.
+
