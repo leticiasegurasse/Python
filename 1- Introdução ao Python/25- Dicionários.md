@@ -135,3 +135,182 @@ Saída esperada:
     'Bob': {'idade': 23, 'cidade': 'Rio de Janeiro', 'curso': 'Medicina'}
 }
 ```
+
+## Dicionários Contendo Outras Estruturas de Dados
+### Exemplo 1: Dicionários com Listas como Valores
+```
+# Dicionário onde os valores são listas
+estudantes_notas = {
+    "Alice": [85, 90, 88],
+    "Bob": [78, 82, 80],
+    "Carol": [92, 95, 93]
+}
+
+# Acessando notas de um estudante
+notas_alice = estudantes_notas["Alice"]
+primeira_nota_alice = estudantes_notas["Alice"][0]
+print(notas_alice)  # [85, 90, 88]
+print(primeira_nota_alice)  # 85
+
+# Adicionando uma nova nota para Bob
+estudantes_notas["Bob"].append(85)
+print(estudantes_notas["Bob"])  # [78, 82, 80, 85]
+```
+
+### Exemplo 2: Dicionários com Tuplas como Chaves
+```
+# Dicionário onde as chaves são tuplas
+localizacoes = {
+    (40.7128, -74.0060): "Nova York",
+    (34.0522, -118.2437): "Los Angeles",
+    (51.5074, -0.1278): "Londres"
+}
+
+# Acessando uma localização pelo par de coordenadas
+cidade = localizacoes[(40.7128, -74.0060)]
+print(cidade)  # Nova York
+```
+
+## Estruturas de Dados Contendo Dicionários
+### Exemplo 3: Lista de Dicionários
+```
+# Lista de dicionários, cada um representando um estudante
+estudantes = [
+    {"nome": "Alice", "idade": 25, "curso": "Engenharia"},
+    {"nome": "Bob", "idade": 23, "curso": "Medicina"},
+    {"nome": "Carol", "idade": 22, "curso": "Arquitetura"}
+]
+
+# Acessando informações do primeiro estudante
+primeiro_estudante = estudantes[0]
+print(primeiro_estudante)  # {'nome': 'Alice', 'idade': 25, 'curso': 'Engenharia'}
+
+# Acessando o curso do segundo estudante
+curso_bob = estudantes[1]["curso"]
+print(curso_bob)  # Medicina
+```
+
+### Exemplo 4: Tupla de Dicionários
+```
+# Tupla de dicionários
+dados_tupla = (
+    {"nome": "Alice", "idade": 25},
+    {"nome": "Bob", "idade": 23},
+    {"nome": "Carol", "idade": 22}
+)
+
+# Acessando informações do terceiro elemento
+terceiro_elemento = dados_tupla[2]
+print(terceiro_elemento)  # {'nome': 'Carol', 'idade': 22}
+
+# Acessando a idade do primeiro elemento
+idade_alice = dados_tupla[0]["idade"]
+print(idade_alice)  # 25
+```
+
+## Usando o Método update em Dicionários Python
+O método update é utilizado para atualizar um dicionário com elementos de outro dicionário ou de uma sequência de pares chave-valor. Ele adiciona novas chaves e valores ao dicionário original e, se houver chaves duplicadas, os valores são substituídos pelos novos.
+
+### Sintaxe
+```
+dicionario.update(outro_dicionario)
+```
+
+- outro_dicionario: Pode ser um dicionário ou uma sequência de pares chave-valor (como uma lista de tuplas).
+
+## Exemplos
+### Exemplo 1: Atualizando um Dicionário com Outro Dicionário
+```
+dicionario1 = {"nome": "Alice", "idade": 25}
+dicionario2 = {"cidade": "São Paulo", "idade": 26}
+
+dicionario1.update(dicionario2)
+print(dicionario1)  # Saída esperada: {'nome': 'Alice', 'idade': 26, 'cidade': 'São Paulo'}
+```
+Neste exemplo, o valor da chave "idade" foi substituído pelo valor do segundo dicionário (26), e a nova chave "cidade" foi adicionada ao dicionário original.
+
+### Exemplo 2: Atualizando um Dicionário com uma Sequência de Pares Chave-Valor
+```
+dicionario = {"nome": "Bob", "curso": "Medicina"}
+
+# Sequência de pares chave-valor
+novos_valores = [("idade", 23), ("cidade", "Rio de Janeiro")]
+
+dicionario.update(novos_valores)
+print(dicionario)  # Saída esperada: {'nome': 'Bob', 'curso': 'Medicina', 'idade': 23, 'cidade': 'Rio de Janeiro'}
+```
+
+## Misturando Diferentes Formas de Atualização
+Você pode combinar todas as formas mencionadas acima ao usar o método 'update'.
+```
+dicionario = {"nome": "Dave", "idade": 30}
+
+# Outro dicionário
+dicionario_update1 = {"cidade": "Curitiba"}
+
+# Sequência de pares chave-valor
+dicionario_update2 = [("profissao", "Engenheiro")]
+
+# Atualizando com diferentes formas
+dicionario.update(dicionario_update1)
+dicionario.update(dicionario_update2)
+dicionario.update(email="dave@example.com")
+
+print(dicionario)  # Saída esperada: {'nome': 'Dave', 'idade': 30, 'cidade': 'Curitiba', 'profissao': 'Engenheiro', 'email': 'dave@example.com'}
+```
+
+## Iterar sobre as chaves e valores
+Para iterar sobre as chaves e valores em um dicionário Python, você pode usar o método 'items()' do dicionário juntamente com um loop 'for'. O método 'items()' retorna uma visão de pares (chave, valor) que podem ser facilmente iterados. Aqui estão alguns exemplos de como fazer isso:
+
+### Iterando Apenas sobre Chaves
+Para iterar apenas sobre as chaves do dicionário, você pode usar um loop for diretamente no dicionário ou utilizar o método keys().
+```
+meu_dicionario = {"nome": "Alice", "idade": 25, "cidade": "São Paulo"}
+
+# Iterando diretamente sobre as chaves
+for chave in meu_dicionario:
+    print(chave)
+
+# Iterando usando o método keys()
+for chave in meu_dicionario.keys():
+    print(chave)
+```
+
+### Iterando Apenas sobre Valores
+Para iterar apenas sobre os valores do dicionário, use o método 'values()'.
+```
+meu_dicionario = {"nome": "Alice", "idade": 25, "cidade": "São Paulo"}
+
+for valor in meu_dicionario.values():
+    print(valor)
+```
+
+### Iterando sobre Chaves e Valores
+Para iterar sobre pares chave-valor, use o método 'items()'.
+```
+meu_dicionario = {"nome": "Alice", "idade": 25, "cidade": "São Paulo"}
+
+for chave, valor in meu_dicionario.items():
+    print(f"Chave: {chave}, Valor: {valor}")
+```
+
+### Exemplo 1: Iterando sobre um Dicionário Aninhado
+Dicionários aninhados (dicionários dentro de dicionários) também podem ser iterados.
+```
+dados_pessoas = {
+    "Alice": {"idade": 25, "cidade": "São Paulo"},
+    "Bob": {"idade": 23, "cidade": "Rio de Janeiro"},
+    "Carol": {"idade": 22, "cidade": "Brasília"}
+}
+
+# Iterando sobre o dicionário aninhado
+for nome, dados in dados_pessoas.items():
+    print(f"Nome: {nome}")
+    for chave, valor in dados.items():
+        print(f"  {chave}: {valor}")
+```
+
+# ---------------
+
+## Exercício cadastro pessoa
+Faça um programa que o usuário possa cadastrar n pessoas, armazenando seu nome, idade e altura
