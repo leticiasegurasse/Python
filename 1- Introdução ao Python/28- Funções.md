@@ -40,6 +40,14 @@ def soma(a, b):
 # Chamando a função e armazenando o resultado em uma variável
 resultado = soma(3, 5)
 print(resultado)  # Saída esperada: 8
+
+# Mais de um retorno
+def soma(a, b):
+    return a + b, a, b
+
+# Chamando a função e armazenando o resultado em uma variável
+resultado, a, b = soma(3, 5)
+print(resultado)  # Saída esperada: 8
 ```
 
 ## Parâmetros Padrão
@@ -85,7 +93,7 @@ def exibir_informacoes(**kwargs):
     for chave, valor in kwargs.items():
         print(f"{chave}: {valor}")
 
-# Chamando a função com múltiplos argumentos nomeados
+# Chamando a função com múltiplos argumentos nomeados (dicionario)
 exibir_informacoes(nome="Alice", idade=25, cidade="São Paulo")
 ```
 Saída esperada:
@@ -94,3 +102,4 @@ nome: Alice
 idade: 25
 cidade: São Paulo
 ```
+
